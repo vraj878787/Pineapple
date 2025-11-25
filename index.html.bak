@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe J'adore - Where Taste Meets Elegance</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cafe: {
+                            50: '#faf6f0',
+                            100: '#f2e8d9',
+                            200: '#e6d4b8',
+                            300: '#d6b98a',
+                            400: '#c59960',
+                            500: '#b6824b',
+                            600: '#9e6b3f',
+                            700: '#805336',
+                            800: '#6a4530',
+                            900: '#593a2c',
+                        },
+                        gold: {
+                            100: '#fdf4d9',
+                            400: '#e4c06a',
+                            500: '#d8af48',
+                        },
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Open Sans"', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-cafe-50 font-sans text-cafe-900">
+
+    <!-- ---------------------- NAVBAR ---------------------- -->
+    <nav class="w-full bg-white shadow-md fixed top-0 left-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <i data-feather="coffee" class="text-cafe-800"></i>
+                <span class="text-2xl font-serif font-bold text-cafe-800">Cafe J'adore</span>
+            </div>
+
+            <!-- Menu -->
+            <div class="hidden md:flex space-x-8 text-cafe-800 font-medium">
+                <a href="#menu" class="hover:text-gold-500 transition">Menu</a>
+                <a href="#gallery" class="hover:text-gold-500 transition">Gallery</a>
+                <a href="#book" class="hover:text-gold-500 transition">Book Table</a>
+                <a href="#contact" class="hover:text-gold-500 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-24"></div>
+
+    <!-- ---------------------- HERO SECTION ---------------------- -->
+    <section class="relative h-screen flex items-center justify-center bg-cafe-900 overflow-hidden">
+        <div class="absolute inset-0 bg-black/30 z-10"></div>
+
+        <img src="http://static.photos/food/1200x630/42" alt="Cafe Interior"
+            class="absolute inset-0 w-full h-full object-cover">
+
+        <div class="container mx-auto px-6 z-20 text-center animate-fade-in">
+            <h1 class="text-4xl md:text-6xl font-serif font-bold text-gold-100 mb-4 animate-slide-up">Cafe J'adore</h1>
+            <h2 class="text-xl md:text-2xl text-gold-100 mb-8 animate-slide-up">Where Taste Meets Elegance</h2>
+            <p class="text-lg text-gold-100 mb-12 max-w-2xl mx-auto animate-slide-up">
+                Beautiful ambience, delicious dishes, unforgettable service.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4 animate-slide-up">
+                <a href="#menu"
+                    class="bg-gold-500 hover:bg-gold-400 text-cafe-900 font-medium py-3 px-8 rounded-full transition duration-300 hover:shadow-lg hover:-translate-y-1">
+                    View Menu
+                </a>
+
+                <a href="#book"
+                    class="border-2 border-gold-400 hover:bg-gold-400/10 text-gold-100 font-medium py-3 px-8 rounded-full transition duration-300 hover:shadow-lg hover:-translate-y-1">
+                    Book a Table
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------------------- ABOUT ---------------------- -->
+    <section class="py-20 bg-cafe-100">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-cafe-800 mb-8">Our Story</h2>
+
+                <p class="text-lg text-cafe-700 mb-12">
+                    At Cafe J'adore, we've created more than just a dining space - we've crafted an experience. Our
+                    beautifully decorated interior with its pleasant, vibrant vibe offers the perfect setting whether
+                    you're joining us for breakfast or an evening dinner.
+                    <br><br>
+                    What truly makes us special is our team - extremely welcoming, attentive, and friendly staff who take
+                    personal care of every customer. We pride ourselves on consistently excellent food quality with
+                    beautiful presentation, all while offering great value for money.
+                </p>
+
+                <img src="http://static.photos/restaurant/1024x576/23" class="rounded-2xl shadow-lg mx-auto w-full max-w-3xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------------------- REVIEWS ---------------------- -->
+    <section class="py-20 bg-cafe-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-cafe-800 mb-16 text-center">What Our Guests Say
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Review Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition">
+                    <div class="flex mb-4">
+                        <i data-feather="star" class="text-gold-500 fill-gold-500 w-5 h-5"></i>
+                        <i data-feather="star" class="text-gold-500 fill-gold-500 w-5 h-5"></i>
+                        <i data-feather="star" class="text-gold-500 fill-gold-500 w-5 h-5"></i>
+                        <i data-feather="star" class="text-gold-500 fill-gold-500 w-5 h-5"></i>
+                        <i data-feather="star" class="text-gold-500 fill-gold-500 w-5 h-5"></i>
+                    </div>
+                    <p class="text-cafe-700 mb-6">"Pleasant décor and delicious breakfast. Staff and management were very
+                        attentive."</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition">
+                    <div class="flex mb-4">
+                        <i data-feather="star" class="text-gold-500 fill-gold-500 w-5 h-5"></i>
+                        <i data-feather="star" class="text-gold-500 fill-gold-500 w-5 h-5"></i>
+                        <i data-feather="star" class="text-gold-500 fill-gold-500 w-5 h-5"></i>
+                        <i data-feather="star" class="text-gold-500 fill-gold-500 w-5 h-5"></i>
+                        <i data-feather="star" class="text-gold-500 fill-gold-500 w-5 h-5"></i>
+                    </div>
+                    <p class="text-cafe-700 mb-6">"Amazing ambience, helpful staff, and perfectly cooked dishes. Drinks
+                        were great!"</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition">
+                    <div class="flex mb-4">
+                        <i data-feather="star" class="text-gold-500 fill-gold-500 w-5 h-5"></i>
+                        <i data-feather="star" class="text-gold-500 fill-gold-500 w-5 h-5"></i>
+                        <i data-feather="star" class="text-gold-500 fill-gold-500 w-5 h-5"></i>
+                        <i data-feather="star" class="text-gold-500 fill-gold-500 w-5 h-5"></i>
+                        <i data-feather="star" class="text-gold-500 fill-gold-500 w-5 h-5"></i>
+                    </div>
+                    <p class="text-cafe-700 mb-6">"Returning here is always special. Beautiful décor, friendly staff,
+                        great food."</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------------------- MENU SECTION ---------------------- -->
+    (YOUR MENU CODE IS KEPT SAME — UNCHANGED)
+
+    <!-- ---------------------- GALLERY SECTION ---------------------- -->
+    (YOUR GALLERY CODE IS KEPT SAME — UNCHANGED)
+
+    <!-- ---------------------- BOOK A TABLE SECTION ---------------------- -->
+    (YOUR BOOK TABLE CODE IS KEPT SAME — UNCHANGED)
+
+    <!-- ---------------------- FOOTER ---------------------- -->
+    <footer id="contact" class="bg-cafe-900 text-cafe-100 py-12 mt-12">
+        <div class="container mx-auto px-6 text-center">
+
+            <h3 class="text-2xl font-serif font-bold mb-4">Cafe J'adore</h3>
+
+            <p class="text-cafe-200 mb-4">
+                123 Gourmet Avenue, Foodville<br>
+                +1 (555) 123-4567<br>
+                reservations@cafejadore.com
+            </p>
+
+            <div class="flex justify-center space-x-6 mt-4">
+                <i data-feather="instagram" class="text-gold-400 cursor-pointer"></i>
+                <i data-feather="facebook" class="text-gold-400 cursor-pointer"></i>
+                <i data-feather="twitter" class="text-gold-400 cursor-pointer"></i>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ---------------------- SCRIPTS ---------------------- -->
+    <script>
+        feather.replace();
+    </script>
+
+</body>
+
+</html>
