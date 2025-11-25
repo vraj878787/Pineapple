@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe J'adore - Taste Meets Elegance</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-cafe-50 font-sans text-cafe-900">
+
+    <!-- ======================= NAVBAR ======================= -->
+    <nav class="bg-white shadow-md fixed w-full top-0 left-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <i data-feather="coffee" class="text-cafe-800 w-6 h-6"></i>
+                <span class="text-2xl font-serif font-bold text-cafe-800">Cafe J'adore</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 text-cafe-800 font-medium">
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#book" class="nav-link">Book Table</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <div class="md:hidden">
+                <button id="menuBtn" class="focus:outline-none">
+                    <i data-feather="menu" class="w-7 h-7 text-cafe-800"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden bg-white shadow-md md:hidden flex-col py-4 px-6 space-y-4">
+            <a href="#menu" class="mobile-link">Menu</a>
+            <a href="#gallery" class="mobile-link">Gallery</a>
+            <a href="#book" class="mobile-link">Book Table</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+    </nav>
+
+    <script>
+        feather.replace();
+
+        const btn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        btn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
+
+    <div class="pt-24"></div>
+
+    <!-- ======================= HERO ======================= -->
+    <section class="relative h-[90vh] flex items-center justify-center bg-cafe-900">
+        <div class="absolute inset-0 bg-black/40"></div>
+
+        <img src="http://static.photos/food/1200x630/42"
+             class="absolute inset-0 w-full h-full object-cover" />
+
+        <div class="relative z-20 text-center px-6">
+            <h1 class="text-5xl md:text-6xl font-serif text-gold-100 font-bold mb-4">Cafe J'adore</h1>
+            <p class="text-lg md:text-xl text-gold-100 max-w-2xl mx-auto mb-8">Beautiful ambience, unforgettable food & exceptional service.</p>
+
+            <a href="#menu"
+               class="inline-block bg-gold-500 hover:bg-gold-400 text-cafe-900 font-semibold py-3 px-8 rounded-full transition duration-300">
+                Explore Menu
+            </a>
+        </div>
+    </section>
+
+    <!-- ======================= ABOUT ======================= -->
+    <section class="py-16 bg-cafe-100">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <h2 class="section-title">Our Story</h2>
+
+            <p class="section-text">
+                At Cafe J'adore, we focus on warm hospitality, top-quality ingredients and beautiful presentation.
+                Whether it’s breakfast, lunch or dinner — every guest receives attentive service and an elegant dining experience.
+            </p>
+
+            <img src="http://static.photos/restaurant/1024x576/23"
+                 class="rounded-2xl w-full max-w-3xl mx-auto shadow-lg mt-10" />
+        </div>
+    </section>
+
+<!-- ======================= REVIEWS ======================= -->
+<section id="reviews" class="py-20 bg-cafe-200">
+    <div class="container mx-auto px-6">
+        
+        <h2 class="section-title text-center">Customer Reviews</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12">
+
+            <!-- Review 1 -->
+            <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition">
+                <div class="flex mb-3">
+                    <i data-feather="star" class="text-gold-500 fill-gold-500"></i>
+                    <i data-feather="star" class="text-gold-500 fill-gold-500"></i>
+                    <i data-feather="star" class="text-gold-500 fill-gold-500"></i>
+                    <i data-feather="star" class="text-gold-500 fill-gold-500"></i>
+                    <i data-feather="star" class="text-gold-500 fill-gold-500"></i>
+                </div>
+                <p class="text-cafe-700">
+                    "Pleasant décor and delicious breakfast. Staff and management 
+                    were attentive and friendly. Really enjoyed the ambiance!"
+                </p>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition">
+                <div class="flex mb-3">
+                    <i data-feather="star" class="text-gold-500 fill-gold-500"></i>
+                    <i data-feather="star" class="text-gold-500 fill-gold-500"></i>
+                    <i data-feather="star" class="text-gold-500 fill-gold-500"></i>
+                    <i data-feather="star" class="text-gold-500 fill-gold-500"></i>
+                    <i data-feather="star" class="text-gold-500 fill-gold-500"></i>
+                </div>
+                <p class="text-cafe-700">
+                    "Amazing ambience, helpful staff, and perfectly cooked dishes. 
+                    Drinks were absolutely delightful!"
+                </p>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition">
+                <div class="flex mb-3">
+                    <i data-feather="star" class="text-gold-500 fill-gold-500"></i>
+                    <i data-feather="star" class="text-gold-500 fill-gold-500"></i>
+                    <i data-feather="star" class="text-gold-500 fill-gold-500"></i>
+                    <i data-feather="star" class="text-gold-500 fill-gold-500"></i>
+                    <i data-feather="star" class="text-gold-500 fill-gold-500"></i>
+                </div>
+                <p class="text-cafe-700">
+                    "Always a special experience. Beautiful décor, friendly staff, 
+                    delicious food and excellent value for money!"
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+    feather.replace();
+</script>
+
+    <!-- ======================= MENU ======================= -->
+    <section id="menu" class="py-20 bg-cafe-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-center">Featured Menu</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
+                <div class="menu-card">
+                    <h3 class="menu-title">Chicken Supreme</h3>
+                    <p class="menu-desc">Juicy grilled chicken with creamy sauce.</p>
+                    <p class="menu-price">£12.99</p>
+                </div>
+                <div class="menu-card">
+                    <h3 class="menu-title">Bang Bang Spicy Chicken</h3>
+                    <p class="menu-desc">Crispy & spicy chicken served hot.</p>
+                    <p class="menu-price">£10.49</p>
+                </div>
+                <div class="menu-card">
+                    <h3 class="menu-title">Lamb Shanks</h3>
+                    <p class="menu-desc">Slow-cooked tender lamb with herbs.</p>
+                    <p class="menu-price">£15.99</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================= GALLERY ======================= -->
+    <section id="gallery" class="py-20 bg-cafe-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-center">Gallery</h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-10">
+                <img src="http://static.photos/food/600x400/91" class="gallery-img" />
+                <img src="http://static.photos/food/600x400/14" class="gallery-img" />
+                <img src="http://static.photos/food/600x400/31" class="gallery-img" />
+                <img src="http://static.photos/food/600x400/4" class="gallery-img" />
+                <img src="http://static.photos/food/600x400/52" class="gallery-img" />
+                <img src="http://static.photos/food/600x400/7" class="gallery-img" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================= BOOK TABLE ======================= -->
+    <section id="book" class="py-20 bg-cafe-50">
+        <div class="container mx-auto px-6 max-w-xl">
+            <h2 class="section-title text-center">Reserve a Table</h2>
+
+            <form class="mt-12 grid grid-cols-1 gap-6">
+                <input type="text" class="form-input" placeholder="Your Name" required>
+                <input type="email" class="form-input" placeholder="Email Address" required>
+                <input type="tel" class="form-input" placeholder="Phone Number" required>
+                <textarea class="form-textarea" rows="4" placeholder="Message"></textarea>
+
+                <button class="submit-btn">Send Booking Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ======================= FOOTER ======================= -->
+    <footer id="contact" class="bg-cafe-900 text-cafe-100 py-12 text-center">
+        <h3 class="text-2xl font-serif font-bold mb-3">Cafe J'adore</h3>
+
+        <p class="text-cafe-200 mb-4">
+            Main Street, Foodville — Leeds, UK<br />
+            Phone: +44 0000 000000
+        </p>
+
+        <div class="flex justify-center space-x-6 mt-4">
+            <i data-feather="instagram" class="text-gold-400"></i>
+            <i data-feather="facebook" class="text-gold-400"></i>
+            <i data-feather="twitter" class="text-gold-400"></i>
+        </div>
+    </footer>
+
+</body>
+</html>
