@@ -36,6 +36,11 @@ nav{background:#ffffff}
 
 /* HERO adjustments */
 section.relative.min-h-[70vh] { min-height:70vh; }
+.hero {
+    background: url("https://images.unsplash.com/photo-1509042239860-f550ce710b93
+") center/cover no-repeat;
+}
+
 
 /* Menu cards */
 .menu-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,0.06);max-width:360px}
