@@ -1,0 +1,88 @@
+/* ============================
+   GLOBAL TYPOGRAPHY & LAYOUT
+============================ */
+:root{
+  --cafe-50:#faf6f0;
+  --cafe-100:#f2e8d9;
+  --cafe-200:#e6d4b8;
+  --cafe-300:#d6b98a;
+  --cafe-500:#b6824b;
+  --cafe-800:#6a4530;
+  --cafe-900:#593a2c;
+  --gold:#e4c06a;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  color:var(--cafe-900);
+  background:var(--cafe-50);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Tailwind container compatibility: limit width and center */
+.container{max-width:1100px;margin:0 auto;padding-left:1rem;padding-right:1rem}
+
+/* Headings */
+.section-title{font-family:'Playfair Display',serif;font-size:2.4rem;color:var(--cafe-900);margin-bottom:0.6rem}
+.section-text{color:#6a4530;font-size:1.05rem}
+
+/* NAV */
+nav{background:#ffffff}
+.nav-link,.mobile-link{color:var(--cafe-900);text-decoration:none;font-weight:500}
+.nav-link:hover,.mobile-link:hover{color:var(--gold)}
+
+/* HERO adjustments */
+section.relative.min-h-[70vh] { min-height:70vh; }
+
+/* Menu cards */
+.menu-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,0.06);max-width:360px}
+.menu-card img{display:block}
+.menu-card .p-6{padding:1.25rem}
+
+/* gallery images */
+.gallery-img{width:100%;height:200px;object-fit:cover;border-radius:10px;display:block}
+
+/* REVIEWS */
+#reviews .rounded-xl{border-radius:12px}
+
+/* FORM */
+.form-input,.form-textarea,select{
+  width:100%;
+  padding:12px 14px;
+  border:1px solid rgba(150,110,80,0.15);
+  border-radius:10px;
+  background: #fff;
+  color:var(--cafe-900);
+  font-size:1rem;
+}
+
+/* ensure selects display like inputs on mobile */
+select.form-input{appearance:none}
+
+/* textarea */
+.form-textarea{min-height:110px;resize:vertical}
+
+/* submit button */
+.submit-btn{
+  background:var(--gold);
+  color:var(--cafe-900);
+  padding:12px 18px;border-radius:10px;border:none;font-weight:600;width:100%;
+}
+
+/* fix large gaps and ensure sections have consistent padding */
+section{padding-top:2.5rem;padding-bottom:2.5rem}
+@media(min-width:768px){section{padding-top:3.5rem;padding-bottom:3.5rem}}
+
+/* Small screen tweaks */
+@media(max-width:767px){
+  .section-title{font-size:1.8rem}
+  .gallery-img{height:150px}
+  .menu-card{max-width:100%}
+  .container{padding-left:1rem;padding-right:1rem}
+}
+
+/* Accessibility focus */
+:focus{outline:2px solid var(--gold);outline-offset:2px}
